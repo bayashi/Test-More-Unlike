@@ -1,11 +1,12 @@
 use strict;
 use warnings;
 use Test::More;
-
 use Test::More::Unlike;
 
-can_ok 'Test::More::Unlike', qw/new/;
+if ($ENV{AUTHOR_TEST}) {
+    Test::More::unlike 'abcdef', qr/cd/;
+}
 
-# write more tests
+ok 1;
 
 done_testing;
