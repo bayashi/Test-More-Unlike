@@ -16,7 +16,10 @@ my $builder = Module::Build->new(
     },
     requires => {
         'perl' => '5.008001',
-        'Carp' => 0,
+        'strict' => 0,
+        'warnings' => 0,
+        'Test::More' => 0.88,
+        'Text::MatchedPosition' => 0,
     },
     add_to_cleanup      => [ 'Test-More-Unlike-*' ],
     meta_merge     => {
