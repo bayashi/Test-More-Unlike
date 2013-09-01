@@ -10,7 +10,7 @@ use strict;
 use Text::MatchedPosition;
 no warnings 'redefine';
 
-sub unlike ($$;$) {
+sub unlike ($$;$) { ## no critic (Subroutines::ProhibitSubroutinePrototypes)
     my $tb = Test::More->builder;
     my $ret = $tb->unlike(@_);
     return $ret if $ret eq '1';
