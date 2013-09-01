@@ -47,7 +47,7 @@ Test::More::Unlike - show the matched position
 
 =head1 DESCRIPTION
 
-When C<Test::More::unlike> test fails, Test::More::Unlike shows the matched position like below.
+When C<unlike> test fails, if you have used Test::More::Unlike, then the error diag shows additionally the matched position like below.
 
     #           matched at line: 1, offset: 3
 
@@ -69,7 +69,7 @@ Dai Okabayashi E<lt>bayashi@cpan.orgE<gt>
 
 =head1 SEE ALSO
 
-L<Other::Module>
+L<Test::More>
 
 
 =head1 LICENSE
