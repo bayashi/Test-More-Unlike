@@ -11,13 +11,13 @@ sub import {
     my $package = caller(0);
 
     {
-        no strict 'refs';
+        no strict 'refs'; ## no critic
         no warnings 'redefine';
-        *{"$package\::unlike"} = \&{ __PACKAGE__ . '::unlike_more' };
+        *{"$package\::unlike"} = \&{ __PACKAGE__ . '::_unlike' };
     }
 }
 
-sub unlike_more ($$;$) { ## no critic (Subroutines::ProhibitSubroutinePrototypes)
+sub _unlike ($$;$) { ## no critic (Subroutines::ProhibitSubroutinePrototypes)
     my $tb = Test::More->builder;
     my $ret = $tb->unlike(@_);
     return $ret if $ret eq '1';
