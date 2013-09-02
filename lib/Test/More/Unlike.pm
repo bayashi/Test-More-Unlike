@@ -4,7 +4,7 @@ use warnings;
 use Test::More qw//;
 use Text::MatchedPosition;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub import {
     my $class   = shift;
